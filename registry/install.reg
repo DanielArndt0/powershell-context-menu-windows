@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenPowerShellHere]
+@="Open PowerShell here"
+"MUIVerb"="Open PowerShell here"
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenPowerShellHere\command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoExit -Command \"Set-Location -LiteralPath $args[0]\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenPowerShellHere]
+@="Open PowerShell here"
+"MUIVerb"="Open PowerShell here"
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenPowerShellHere\command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoExit -Command \"Set-Location -LiteralPath $args[0]\" \"%V\""
