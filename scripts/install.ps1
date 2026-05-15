@@ -62,7 +62,8 @@ function Add-PowerShellContextMenuEntry {
         -PropertyType String `
         -Force | Out-Null
 
-    $command = "`"$PowerShellPath`" -NoExit -Command `"Set-Location -LiteralPath `$args[0]`" `"$TargetPlaceholder`""
+    $command = "`"$PowerShellPath`" -NoExit -ExecutionPolicy RemoteSigned -Command `"Set-Location -LiteralPath '$TargetPlaceholder'`""
+
     Set-RegistryDefaultValue -Path $commandPath -Value $command
 }
 
